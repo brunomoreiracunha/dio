@@ -1,2 +1,2 @@
-# Repositório do Desafio da DIO 
-## Bootcamp Spread Fullstack Developer
+# Repositório para Desenvolvimento das Atividades da Dio
+
