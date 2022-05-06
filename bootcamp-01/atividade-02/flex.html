@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+</head>
+<style>
+    body{
+        background-color: white;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .flex-container{
+        border: 1px solid black;
+        display: flex;
+        max-width: 350px;
+        margin: 10px;
+    }
+    .item{
+        background-color: orange;
+        font-size: 24px;
+        text-align: center;
+        margin: 5px;
+    }
+    .flex-1{
+        flex: 1;
+        /* Grow = 1, Shrink = 1, Basis = 0 */
+    }
+    .flex-2{
+        flex: 1;
+        /* Grow = 2, Shrink = 1, Basis = 0 */
+    }
+    .largura{
+        width: 200px; /* essa não vai se aplicar.
+        min-width: 200px; essa se aplica por ter outra propriedada, como a Minima*/
+    }
+</style>
+<body>
+    <h3>Flex - 1</h3>
+    <div class="flex-container">
+        <div class="item s-1 flex-1">A</div>
+        <div class="item s-1 flex-1">BBB</div>
+        <div class="item s-1 flex-1">C</div>
+        <div class="item s-1 flex-1">DD</div>
+        <div class="item s-1 flex-1">E</div>
+    </div>
+    <h3>Flex - 2</h3>
+    <div class="flex-container">
+        <div class="item s-1 flex-2">AAA</div>
+        <div class="item s-1 flex-2">B</div>
+        <div class="item s-1 flex-2">CCCCC</div>
+        <div class="item s-1 flex-2">D</div>
+        <div class="item s-1 flex-2">EEE</div>
+    </div>
+    <h3>Flex - 1 e 2</h3>
+    <div class="flex-container">
+        <div class="item s-1 flex-1">AAA</div>
+        <div class="item s-1 flex-2">BBBB</div>
+        <div class="item s-1 flex-1">CC</div>
+        <div class="item s-1 flex-2">DDDD</div>
+        <div class="item s-1 flex-1">E</div>
+    </div>
+    <h3>Flex - 1</h3>
+    <div class="flex-container">
+        <div class="item s-1 flex-1 largura">A</div>
+        <div class="item s-1 flex-1 largura">BBB</div>
+        <div class="item s-1 flex-1 largura">C</div>
+        <div class="item s-1 flex-1 largura">DD</div>
+        <div class="item s-1 flex-1 largura">E</div>
+    </div>
+</body>
+</html>
