@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align - Self</title>
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1{
+            font-size: 35px;
+        }
+        h3{
+            font-size: 25px;
+        }
+        .flex-container{
+            border: 1px solid black;
+            display: flex;
+            max-width: 450px;
+            margin: 10px;
+            /* align-items: center; */
+        }
+        .item{
+            background-color: green;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            
+        }
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .auto{
+            align-self: auto;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .column{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>LINHA</h1>
+    <h3>Auto</h3>
+    <div class="flex-container">
+        <div class="item auto">Primeiro</div>
+        <div class="item auto">Segundo Item</div>
+        <div class="item auto">Terceiro</div>
+        <div class="item auto">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Center</h3>
+    <div class="flex-container">
+        <div class="item center">Primeiro</div>
+        <div class="item center">Segundo Item</div>
+        <div class="item center">Terceiro</div>
+        <div class="item center">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Start</h3>
+    <div class="flex-container">
+        <div class="item start">Primeiro</div>
+        <div class="item start">Segundo Item</div>
+        <div class="item start">Terceiro</div>
+        <div class="item start">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>End</h3>
+    <div class="flex-container">
+        <div class="item end">Primeiro</div>
+        <div class="item end">Segundo Item</div>
+        <div class="item end">Terceiro</div>
+        <div class="item end">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Baseline</h3>
+    <div class="flex-container">
+        <div class="item baseline">Primeiro</div>
+        <div class="item baseline">Segundo Item</div>
+        <div class="item start">Terceiro</div>
+        <div class="item baseline">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Stretch</h3>
+    <div class="flex-container">
+        <div class="item stretch">Primeiro</div>
+        <div class="item stretch">Segundo Item</div>
+        <div class="item stretch">Terceiro</div>
+        <div class="item stretch">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Diferentes</h3>
+    <div class="flex-container">
+        <div class="item start">001 Start</div>
+        <div class="item end">002 End</div>
+        <div class="item baseline">003 Baseline</div>
+        <div class="item auto">004 Auto, o maior item de todos os outros</div>
+        <div class="item center">005 Center</div>
+        <div class="item stretch">006 Stretch</div>
+    </div>
+
+    <h1>COLUNA</h1>
+    
+    <h3>Auto</h3>
+    <div class="flex-container column">
+        <div class="item auto">Primeiro</div>
+        <div class="item auto">Segundo Item</div>
+        <div class="item auto">Terceiro</div>
+        <div class="item auto">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Center</h3>
+    <div class="flex-container  column">
+        <div class="item center">Primeiro</div>
+        <div class="item center">Segundo Item</div>
+        <div class="item center">Terceiro</div>
+        <div class="item center">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Start</h3>
+    <div class="flex-container  column">
+        <div class="item start">Primeiro</div>
+        <div class="item start">Segundo Item</div>
+        <div class="item start">Terceiro</div>
+        <div class="item start">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>End</h3>
+    <div class="flex-container column">
+        <div class="item end">Primeiro</div>
+        <div class="item end">Segundo Item</div>
+        <div class="item end">Terceiro</div>
+        <div class="item end">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Baseline</h3>
+    <div class="flex-container column">
+        <div class="item baseline">Primeiro</div>
+        <div class="item baseline">Segundo Item</div>
+        <div class="item start">Terceiro</div>
+        <div class="item baseline">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Stretch</h3>
+    <div class="flex-container column">
+        <div class="item stretch">Primeiro</div>
+        <div class="item stretch">Segundo Item</div>
+        <div class="item stretch">Terceiro</div>
+        <div class="item stretch">O Quarto item maior de todos os outros</div>
+    </div>
+    <h3>Diferentes</h3>
+    <div class="flex-container column">
+        <div class="item start">001 Start</div>
+        <div class="item end">002 End</div>
+        <div class="item baseline">003 Baseline</div>
+        <div class="item auto">004 Auto, o maior item de todos os outros</div>
+        <div class="item center">005 Center</div>
+        <div class="item stretch">006 Stretch</div>
+    </div>
+</body>
+</html>
