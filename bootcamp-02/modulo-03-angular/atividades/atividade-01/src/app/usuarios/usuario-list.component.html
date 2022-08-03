@@ -1,0 +1,20 @@
+<h2>Usuario</h2>
+
+<table class="table table-striped">
+    <thead>
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Adicionado</th>
+        <th>Repositório </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td><img [src]="usuario.imgUrl" width="75" height="75" class="rounded-circle"></td>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.dataAdicionado }}</td>
+            <td>{{ usuario.linkRepositorio }}</td>
+        </tr>
+    </tbody>
+</table>

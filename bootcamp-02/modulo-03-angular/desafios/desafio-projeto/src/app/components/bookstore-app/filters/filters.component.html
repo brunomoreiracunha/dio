@@ -1,0 +1,12 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <form>
+      <div class="input-group input-group-sm">
+        <span class="input-group-text" id="search">Título ou Autor do Livro</span>
+        <input type="text" placeholder="Digite o nome do Livro ou Autor a ser procurado."
+          aria-label="Procurar por Titulo ou Autor" class="form-control" aria-describedby="search" #termoBusca>
+        <button class="btn btn-outline-primary btn-block btn-sm" type="button" (click)="busca(termoBusca.value)">Procurar</button>
+      </div>
+    </form>
+  </div>
+</div>

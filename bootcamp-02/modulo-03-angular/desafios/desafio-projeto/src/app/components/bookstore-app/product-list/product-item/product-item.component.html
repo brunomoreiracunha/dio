@@ -1,0 +1,57 @@
+<div class="card shadow-sm mb-4">
+    <img class="bd-placeholder-img card-img-top" width="100%" src="{{livro.image}}"> 
+    
+    <div class="card-body text-center">
+        <p class="card-text">{{livro.title}}</p>
+        <p class="card-text">{{livro.price}}</p>
+        
+    </div>
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+            <div class="btn-group">
+                <div class="col pb-3">
+                    <a href="{{livro.url}}" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="btn btn-sm btn-outline-danger" id="btn-comprar">Comprar</button>
+                    </a>
+                </div>
+                <div class="col pb-3">
+                    <button type="button" class="btn btn-sm btn-outline-primary" id="btn-detalhes"
+                        (click)="open(livroModal)">Detalhes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #livroModal let-modal>
+    <div class="modal-header">
+        <p class="modal-title fs-5 fw-bold" id="modal-livro-titulo">{{livro.title}}</p>
+        <button type="button" class="btn-outline-secondary" aria-label="Close" (click)="modal.dismiss('Fechar Normal')">
+            <mat-icon aria-hidden="true">clear</mat-icon>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-5">
+                <img src="{{livro.image}}" class="card-img-top" alt="{{livro.title}}" width="100">
+            </div>
+            <div class="col-7">
+                <p class="fs-5 fw-bold">{{livro.title}}</p>
+                <p class="fs-5 fw-semibold">{{livro.subtitle}}</p>
+                <p class="fs-6">Autores: {{livro.authors}}</p>
+                <p class="fs-6">Editora: {{livro.publisher}}</p>
+                <p class="fs-6">Ano Publicado: {{livro.year}}</p>
+                <p class="fs-6">Páginas: {{livro.pages}}</p>
+                <p class="fs-6">{{livro.price}}</p>
+            </div>
+        </div>
+        <p class="lh-base text-start">Descrição: {{livro.desc}}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-secondary" (click)="modal.close('Botão Fechar')">Fechar</button>
+
+        <a href="{{livro.url}}" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-sm btn-outline-danger" (click)="modal.close('Botão Compra')">Comprar</button>
+        </a> 
+    </div>
+</ng-template>

@@ -1,0 +1,8 @@
+<div class="col">
+    <div class="row">
+        <app-filters (termoBusca)="searchByTerm($event)"></app-filters>
+    </div>
+    <div class="row">
+        <app-product-list [termoBusca]="termoBusca"></app-product-list>
+    </div>
+</div>
